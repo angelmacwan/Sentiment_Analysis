@@ -26,6 +26,7 @@ padding_type='post'
 oov_tok = "<OOV>"
 
 
+# Get your bearer token from Twitter API
 
 class TwitterAPI:
     def __init__(self):
