@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Sentiment Analysis</title>
+</head>
+<body>
+<br>
+    
+    <div class="ui grid">
+        <div class="three wide column">
+          <div class="ui vertical fluid tabular menu">
+            <a class="item" id="showAboutbtn" onclick="changeToActive('#showAboutbtn')">
+              About
+            </a>
+            <a class="item" id="showTwitterbtn" onclick="changeToActive('#showTwitterbtn')">
+              Twitter Analysis
+            </a>
+            <a class="item" id="showTextbtn" onclick="changeToActive('#showTextbtn')">
+              Text
+            </a>
+          </div>
+        </div>
+        
+        <div class="twelve wide stretched column">
+            
+            <div class="ui teal message header">
+                Sentiment Analysis
+            </div>
+        
+            <div class="ui segment" id="About">
+                This is a Sentiment Analysis Tool that can analyze tweets of any user or text a user types in real time. 
+                <br>
+                Data set used for training is available at <a href="https://www.kaggle.com/kazanova/sentiment140" target="_blank">https://www.kaggle.com/kazanova/sentiment140</a>
+                <br>
+                Python Code and EDA available at <a href="https://github.com/angelmacwan/SentimentAnalysis" target="_blank">https://github.com/angelmacwan/SentimentAnalysis</a>
+                <br>
+                Project by <a href="https://angelmacwan.github.io" target="_blank">Angel Macwan</a>
+            </div>
+            
+            <div class="ui segment" id="TwitterSentimentAnalysis">
+                <div id="twitterAnalysisContainer">
+
+                    <div class="ui labeled action input">
+                        <div class="ui label">
+                            twitter.com/
+                        </div>
+                        <input type="text" placeholder="twitter handle" id="twitterName">
+                        <button class="ui icon button" onclick="getTweets()"> <i class="search icon"></i> </button>
+                    </div>
+                    
+
+                    <div class="ui segment" id="TwitterTweets">
+                        <!--  -->
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="ui segment" id="TextAnalysis">
+                <div class="ui segment">
+                    <textarea id="textInput" placeholder="Enter text..."></textarea> 
+                </div>
+                <div class="ui segment">
+                    <div id="textOutput"> </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+
+    <script src="/static/app.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,69 @@
+#About, #TwitterSentimentAnalysis, #TextAnalysis{
+    display:none;
+}
+
+#TextAnalysis{
+    height: 80vh;
+    max-height: 80vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0.5rem;
+}
+#TextAnalysis>div{
+    margin: 0;
+    overflow: auto;
+}
+#textInput{
+    resize: none;
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+
+#TwitterTweets{
+    height: 75vh;
+    max-height: 75vh;
+    overflow: auto;
+}
+
+.chartDiv{
+    max-width: 45%;
+    margin-left: 20%;
+}
+
+.positiveText{
+    background: #7cffc3;
+    padding: 2px;
+}
+.negativeText{
+    background: #ff7c7c;
+    padding: 2px;
+}
+.neutralText{
+    background: #ccc;
+    padding: 2px;
+}
+
+.blacktext{
+    color: black;
+}
+
+.twitterCard{
+    display: grid;
+    grid-template-columns: 0.2fr 1fr;
+    background: #08A0E9 !important;
+    color: white;
+}
+
+.twitterImage > img{
+    height: 5rem;
+    border-radius: 50%;
+}
+
+.twitterName{
+    margin: 0;
+    font-size: 2rem;
+}
+.twitterUsername{
+    font-size: 1rem;
+}
