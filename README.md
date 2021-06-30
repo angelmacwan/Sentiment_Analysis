@@ -26,7 +26,7 @@ Non-trainable params: 0
 
 TwitterConnectionAPI contains a class that can fetch users data and tweets using Twitter API.
 
-## Flask APP
+## Flask App
 
 main.py is the flask backend that server html pages from ./static folder
 
@@ -41,6 +41,18 @@ The model is saved in .h5 format, this can be changes to .json to use in TensorF
 
 Following code can be used in terminal (after installing tensorflowjs) to convert .h5 to ,json model
 
+---
+## Running the Flask App
+
+First run will take a few seconds as files for NLTK will need to be downloaded
+
+1. Install all required libraries (I havent included requirments.txt as i was not using a virtual environment)
+  Tensorflow, NLTK, requests, json and Flask
+2.  get the BEARER TOKEN from twitter of you want to use the twitter analysis tool. in main.py replace <YOUR_BEARER_TOKEN> with your token.
+3.  run the main.py file by `python main.py` or `python3 main.py`
+4.  Once the server is running, web interface will be available at `http://127.0.0.1:5000/`
+
+---
 
 install tensorflowjs
 
