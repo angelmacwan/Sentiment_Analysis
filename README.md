@@ -47,7 +47,7 @@ Following code can be used in terminal (after installing tensorflowjs) to conver
 First run will take a few seconds as files for NLTK will need to be downloaded
 
 1. Install all required libraries (I havent included requirments.txt as i was not using a virtual environment)
-  Tensorflow, NLTK, requests, json and Flask
+  (Tensorflow, NLTK, requests, json and Flask)
 2.  get the BEARER TOKEN from twitter of you want to use the twitter analysis tool. in main.py replace <YOUR_BEARER_TOKEN> with your token.
 3.  run the main.py file by `python main.py` or `python3 main.py`
 4.  Once the server is running, web interface will be available at `http://127.0.0.1:5000/`
