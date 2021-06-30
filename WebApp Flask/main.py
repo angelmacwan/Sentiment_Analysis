@@ -16,7 +16,6 @@ from tensorflow.keras.preprocessing.text import tokenizer_from_json
 from tensorflow.keras.models import load_model
 
 
-
 # Model Paramaters (Should be the same when training the model)
 vocab_size = 30000
 embedding_dim = 16
