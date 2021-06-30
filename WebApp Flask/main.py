@@ -1,19 +1,15 @@
-from flask import Flask, redirect, url_for, render_template, request
+from flask import Flask, render_template, request
 
 import requests
-import os
 import json
-import io
-import numpy as np
 
+import nltk
 from nltk.tokenize import sent_tokenize
 
 import tensorflow as tf
-from tensorflow import keras
 from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 from tensorflow.keras.preprocessing.text import tokenizer_from_json
-from tensorflow.keras.models import load_model
 
 
 # Model Paramaters (Should be the same when training the model)
@@ -24,8 +20,10 @@ trunc_type='post'
 padding_type='post'
 oov_tok = "<OOV>"
 
-
-# Get your bearer token from Twitter API
+# download all nltk packages if not already downloaded
+print("Downloading NLTK Packages, might take a while")
+nltk.download("all")
+print("NLTK Packages available")
 
 class TwitterAPI:
     def __init__(self):
