@@ -8,6 +8,7 @@ Data set is available at https://www.kaggle.com/kazanova/sentiment140
 2. DataProcessing.ipynb -> Data PreProcessing step, the output file of this step is used as input data for training the model
 3. ModelTraining.ipynb -> Format the data fot training the model and training a simple Neural Net
 
+
 ### Model Info
 <pre>
 Model: "sequential"
