@@ -4,6 +4,11 @@ import requests
 import json
 
 import nltk
+# download all nltk packages if not already downloaded
+print("Downloading NLTK Packages, might take a while")
+# nltk.download("all")
+nltk.download("punkt")
+print("NLTK Packages available")
 from nltk.tokenize import sent_tokenize
 
 import tensorflow as tf
@@ -20,10 +25,7 @@ trunc_type='post'
 padding_type='post'
 oov_tok = "<OOV>"
 
-# download all nltk packages if not already downloaded
-print("Downloading NLTK Packages, might take a while")
-nltk.download("all")
-print("NLTK Packages available")
+
 
 class TwitterAPI:
     def __init__(self):
