@@ -14,13 +14,13 @@ Data set is available at https://www.kaggle.com/kazanova/sentiment140
 Model: "sequential"
 Layer (type)                 Output Shape              Param 
 
-embedding (Embedding)        (None, 200, 16)           480000    
-global_average_pooling1d (Gl (None, 16)                0         
-dense (Dense)                (None, 24)                408       
+embedding (Embedding)        (None, 40, 32)            256000    
+global_average_pooling1d (Gl (None, 32)                0         
+dense (Dense)                (None, 24)                792       
 dense_1 (Dense)              (None, 1)                 25        
 
-Total params: 480,433
-Trainable params: 480,433
+Total params: 256,817
+Trainable params: 256,817
 Non-trainable params: 0
 </pre>
 
